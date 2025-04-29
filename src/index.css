@@ -112,8 +112,42 @@
   .neon-border {
     @apply border-2 border-electron-neon-blue rounded-lg shadow-[0_0_8px_0px_theme(colors.electron.neon-blue)];
   }
+
+  .neon-border-subtle {
+    @apply border border-electron-neon-blue/50 rounded-lg shadow-[0_0_5px_0px_theme(colors.electron.neon-blue/50)];
+  }
   
   .gradient-bg {
     @apply bg-gradient-to-b from-electron-dark-blue to-electron-midnight;
+  }
+
+  .animate-pulse-gentle {
+    animation: pulse-gentle 3s infinite;
+  }
+
+  .animate-float-slower {
+    animation: float 8s infinite ease-in-out;
+  }
+
+  .animate-float-reverse {
+    animation: float-reverse 7s infinite ease-in-out;
+  }
+
+  @keyframes pulse-gentle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
   }
 }

@@ -62,11 +62,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Добавляем кастомные цвета для "Электрон"
+				// Кастомные цвета для "Электрон"
 				electron: {
 					'neon-blue': '#00E5FF',
 					'dark-blue': '#0A1A3B',
-					white: '#FFFFFF',
+					'white': '#FFFFFF',
 					'light-blue': '#8BE8FF',
 					'midnight': '#091230',
 				}
