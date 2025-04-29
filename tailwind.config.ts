@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,6 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Добавляем кастомные цвета для "Электрон"
+				electron: {
+					'neon-blue': '#00E5FF',
+					'dark-blue': '#0A1A3B',
+					white: '#FFFFFF',
+					'light-blue': '#8BE8FF',
+					'midnight': '#091230',
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-neon': {
+					'0%, 100%': { 
+						opacity: '1',
+						boxShadow: '0 0 15px 2px #00E5FF'
+					},
+					'50%': { 
+						opacity: '0.8',
+						boxShadow: '0 0 25px 4px #00E5FF'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 2s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out'
 			}
 		}
 	},
